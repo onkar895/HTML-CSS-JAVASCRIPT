@@ -1,0 +1,40 @@
+#main {
+    background-color: rgb(251, 252, 245);
+}
+
+h3 {
+    color: rgb(23, 180, 232);
+    font-weight: lighter;
+    font-size: 30px;
+    /* border is used give border */
+    border: 2px solid rgb(9, 1, 1);
+    /* padding is used to give border padding  */
+    padding: 20px;
+    /* margin is used to give margin of the page */
+    margin: 20px;
+}
+
+h1 {
+    color: rgb(10, 0, 0);
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+
+/* Using CLASS */
+
+.Subheading {
+    color: rgb(241, 195, 79);
+}
+
+#heading {
+    color: rgb(7, 135, 247);
+}
+
+div span {
+    color: rgb(242, 58, 26);
+}
+
+div>span {
+    color: rgb(127, 127, 255);
+}

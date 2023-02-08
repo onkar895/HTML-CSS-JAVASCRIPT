@@ -1,0 +1,57 @@
+body {
+    background-color: rgb(138, 244, 244);
+}
+
+ul li:nth-child(1) {
+    color: red;
+    font-family: serif;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+ul li:nth-child(2) {
+    color: red;
+    font-family: sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+ul li:nth-child(3) {
+    color: red;
+    font-family: monospace;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+ul li:nth-child(4) {
+    color: red;
+    font-family: cursive;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+ol.fcheck li:nth-child(2) {
+    color: rgb(235, 17, 159);
+    font-size: 100%;
+    font-weight: bolder;
+}
+
+ol.fcheck li:nth-child(3) {
+    color: rgb(235, 17, 159);
+    font-size: 50%;
+    font-weight: bold;
+}
+
+ol.fcheck li:nth-child(4) {
+    color: rgb(235, 17, 159);
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+ol.fvariant li:nth-child(1) {
+    font-variant: normal;
+}
+
+ol.fvariant li:nth-child(2) {
+    font-variant: small-caps;
+}

@@ -1,0 +1,16 @@
+/* Descemdants */
+
+div span {
+    color: rgb(44, 160, 244);
+}
+
+div p {
+    color: blueviolet;
+}
+
+
+/* Child */
+
+div>p {
+    color: brown;
+}

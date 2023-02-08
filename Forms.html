@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body style="background-color: blanchedalmond;">
+    <h2 style="border:2px solid rgb(246, 89, 17); margin:2px; padding:3px; ">FORMS</h2>
+    <h4>Music Servey Form</h4>
+
+    <form action="Submit.html" method="get">
+        <fieldset>
+            <legend>Basics Info</legend>
+            <label for="Username">Username:</label>
+            <input type="text" name="Your Name" id="Username" placeholder="Enter Your UserName">
+            <br><br>
+
+            <label for="Password">Password:</label>
+            <input type="password" name="Your Password" id="Password" placeholder="Enter Your Password">
+            <br><br>
+
+            <label for="Confirm Password">Confirm Password:</label>
+            <input type="password" name="Confirm Password" id="Confirm Password" placeholder="Enter Password Again">
+            <br><br>
+
+            <label for="Age">Age:</label>
+            <input type="text" name="Age" id="Age">
+            <br><br>
+
+            <label for="Age Range">Age Range:</label>
+            <input type="range" name="Age Range" id="Age Range" min="18" max="40">
+            <br><br>
+
+            <label for="gender">Gender:</label>
+            <input type="radio" name="gender" value="Male" id="Male">Male
+            <input type="radio" name="gender" value="Female" id="Female">Female
+            <br><br>
+
+            <label for="DOB">Date of Birth:</label>
+            <input type="date" name="DOB" id="DOB">
+            <br><br>
+
+            <label for="Preferedcolor">Choose the color</label>
+            <input type="color" name="Preferedcolo" id="Preferedcolo">
+            <br><br>
+
+            <label for="Email">Mail_ID:</label>
+            <input type="email" name="Email" id="Email">
+            <br><br>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Music Preference</legend>
+            <label for="Platform">Which Platform You Used for listen the Music:</label>
+            <select name="Platform" id="Platform">
+                <option value="Spotify">Spotify</option>
+                <option value="Amazon">Amazon Music</option>
+                <option value="YouTube">YT Music</option>
+                <option value="Google Play Music">Google Play Music</option>
+                <option value="Jio Saavan">Jio Saavan</option>
+            </select>
+            <br><br>
+            <label for="Instrument">Which Instrument You love the most:</label>
+            <select name="Instrument" id="Instrument" size="3" multiple>
+                <option value="Guitar">Guitar</option>
+                <option value="Piano">Piano</option>
+                <option value="Dhol">Dhol</option>
+                <option value="Trumpet">Trumpet</option>
+                <option value="Banjo">Banjo</option>
+            </select>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Feedback</legend>
+            <label for="review">Write a review for your favourite music player:</label>
+            <textarea name="review" id="review" cols="30" rows="5"></textarea>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Files</legend>
+            <label for="soundtrack">Upload your Audio/Video:</label>
+            <input type="file" name="soundtrack" id="Audio"><br>
+
+            <label for="photo">Upload your Photo:</label>
+            <input type="file" name="photo" id="photo">
+        </fieldset>
+        <br><br>
+
+        <input type="Submit" name="Submit" id="Submit" value="Submit Servey">
+        <input type="reset" name="reset" id="reset" value="Start Over">
+
+    </form>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+p {
+    color: orange;
+}
+
+#hex {
+    /* Hexa */
+    color: #964B00;
+}
+
+#RGB {
+    /* color: rgb(red, green, blue); */
+    color: rgb(236, 17, 17);
+}
+
+#RGBA {
+    /* color: rgba(red, green, blue, alpha);  alpha means opacity */
+    color: rgba(190, 7, 120, 0.3);
+}
+
+#hsl {
+    /* color: hsl(hue, saturation, lightness); */
+    color: hsl(212, 79%, 37%);
+}
