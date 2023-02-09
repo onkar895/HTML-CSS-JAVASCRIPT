@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+}
+
+p {
+    background-color: rgb(136, 240, 155);
+    color: red;
+    border: 3px solid rgb(92, 62, 203);
+}
+
+a.margin {
+    background-color: rgb(27, 245, 231);
+    color: red;
+    border: 3px solid rgb(92, 62, 203);
+    margin: 10px;
+}
+
+.pb {
+    border: 3px solid rgb(238, 8, 8);
+    padding: 10px;
+}
+
+a {
+    background-color: aqua;
+    color: rgb(11, 7, 2);
+}
+
+a.pb {
+    border: 3px solid rgb(238, 8, 8);
+    padding: 10px;
+}

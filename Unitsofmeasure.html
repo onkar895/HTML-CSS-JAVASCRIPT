@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Units of Measurement</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        ul p {
+            color: rgb(238, 108, 8);
+        }
+        
+        .Rel {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Units of Measurement</h2>
+
+    <ul>
+        <li><strong class="Rel">Relative Unit</strong>
+            <p>Based on size of something <strong>Eg:</strong> Size of parent or default text size</p>
+            <p><strong>Eg:</strong>px, em, rem, vh, vm</p>
+        </li>
+        <li><strong class="Rel">Absolute Unit</strong>
+            <p>Real World Equivalent</p>
+            <p><strong>Eg:</strong>px, pt, mm, cm, in</p>
+        </li>
+    </ul>
+    <hr>
+    <h1>Use of em</h1>
+
+    <div style="font-size: 16px;">
+        <p> By using rem we can use <strong>parent's</strong> font-size</p>
+
+        <p>This is a parent: Hello Class</p>
+        <p style="font-size: 1.25em;">Hello Class: 16px * 1.25em = 20px</p>
+    </div>
+    <br>
+    <hr>
+    <h2>Good Practice</h2>
+
+    <div style="font-size: 20px;">
+        <p> so here every 'p' takes the size: 20px*em's</p>
+        <p style="font-size: 1em;">1em</p>
+        <p style="font-size: 1.25em;">1.25em</p>
+        <p style="font-size: 1.5em;">1.5em</p>
+    </div>
+    <hr>
+    <div>
+        <p>Here every 'p' takes default size which is 16px so it takes 16px*em's</p>
+        <p style="font-size: 1em;">1em</p>
+        <p style="font-size: 1.25em;">1.25em</p>
+        <p style="font-size: 1.5em;">1.5em</p>
+    </div>
+    <hr>
+    <div style="font-size: 20px;">
+        <p> so here every 'p' takes the <strong>Negative</strong> size: -20px*em's so it takes similar font-size which is default font-size</p>
+        <p style="font-size: -1em;">-1em</p>
+        <p style="font-size: -1.25em;">-1.25em</p>
+        <p style="font-size: -1.5em;">-1.5em</p>
+    </div>
+
+    <hr>
+    <h1>Use of rem</h1>
+
+    <div>
+        <p>By using rem we can use <strong>root's</strong> font-size: Root is always a html</p>
+
+        <p> All 'p' Assigns the root elements font which is html so it takes same font-sizes</p>
+        <p style="font-size: 1em;">1rem</p>
+        <p style="font-size: 1.25em;">1.25rem</p>
+        <p style="font-size: 1.5em;">1.5rem</p>
+
+    </div>
+    <hr>
+    <div style="font-size: 20px;"></div>
+    <p> All 'p' Assigns the root elements font which is html so it takes same font-sizes</p>
+    <p style="font-size: 1em;">1rem</p>
+    <p style="font-size: 1.25em;">1.25rem</p>
+    <p style="font-size: 1.5em;">1.5rem</p>
+
+    </div>
+
+    <div style="font-size: 30px;"></div>
+    <p> All 'p' Assigns the root elements font which is html so it takes same font-sizes</p>
+    <p style="font-size: 1em;">1rem</p>
+    <p style="font-size: 1.25em;">1.25rem</p>
+    <p style="font-size: 1.5em;">1.5rem</p>
+
+    </div>
+
+</body>
+
+</html>
