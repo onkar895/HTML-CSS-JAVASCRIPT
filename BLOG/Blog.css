@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(249, 247, 247);
+}
+
+header {
+    background-color: aliceblue;
+    padding: 10px;
+}
+
+nav {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    /* grid-template-columns: specifies the number (and the widths) of columns in a grid layout. */
+    grid-template-columns: repeat(5, 1fr);
+    text-align: center;
+    align-items: center;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+nav a {
+    color: #3b68ad;
+    /* text-decoration: Removes the decorations of text such as underline , Italic etc */
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+nav h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    line-height: 1em;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+nav h1 div:first-child {
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+nav h1 div:last-child {
+    font-weight: lighter;
+    letter-spacing: 1.5px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    /* The grid-auto-rows: property sets a size for the rows in a grid container. */
+    grid-auto-rows: 320px;
+}
+
+main div {
+    background-color: rgb(249, 247, 247);
+    border: 10px solid rgb(249, 247, 247);
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.3);
+    /* The CSS overflow: property controls what happens to content that is too big to fit into an area. */
+    overflow: hidden;
+}
+
+main img {
+    min-width: 100%;
+    height: 100%;
+}
+
+main .short {
+    grid-row: span 1;
+}
+
+main .Tall {
+    grid-row: span 2;
+}

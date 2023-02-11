@@ -20,8 +20,15 @@ nav {
 }
 
 nav li {
+    /* display: inline-block; */
+    /* margin: 10px; */
     list-style: none;
     float: left;
+    margin: 10px;
+}
+
+nav li:hover {
+    background-color: #111;
 }
 
 nav ul::after {
