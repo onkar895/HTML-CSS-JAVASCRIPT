@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+
+    <!-- CSS position : Relative, Static(Default), Absolute, fixed, Sticky -->
+
+    <style>
+        .container {
+            border: 2px solid blue;
+            background-color: antiquewhite;
+        }
+        
+        .box {
+            display: inline-block;
+            border: 2px solid red;
+            margin: 2px;
+            width: 150px;
+            height: 150px;
+        }
+        
+        #static {
+            position: static;
+        }
+        
+        #Relative {
+            position: relative;
+            top: 140px;
+            bottom: 40px;
+        }
+        
+        #Absolute {
+            position: absolute;
+            background-color: aqua;
+        }
+        
+        #Fixed {
+            position: fixed;
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">Parent
+        <div class="box" id="static">Static: Default Value</div>
+        <div class="box" id="Relative">relative: relative to its normal position and will leave a gap at its normal position</div>
+        <div class="box" id="Absolute">Absolute: relative to the position of its first parent</div>
+        <div class="box" id="Fixed">Fixed: Fixed at particular position means you cannot move it</div>
+    </div>
+</body>
+
+</html>
