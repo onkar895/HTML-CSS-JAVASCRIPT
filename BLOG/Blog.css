@@ -36,6 +36,7 @@ nav h1 {
 
 nav h1 div:hover {
     transform: scale(1.5);
+    transition: width 2s, height 2s, transform 2s;
     color: antiquewhite;
 }
 
@@ -51,18 +52,19 @@ nav h1 div:last-child {
 
 main {
     max-width: 1200px;
-    margin: 50px auto;
+    margin: 20px 80px 20px 80px;
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     /* The grid-auto-rows: property sets a size for the rows in a grid container. */
-    grid-auto-rows: 320px;
+    grid-auto-rows: 240px;
+    /* place-items: center; */
 }
 
 main div {
     background-color: rgb(249, 247, 247);
-    border: 10px solid rgb(249, 247, 247);
+    border: 5px solid rgb(249, 247, 247);
     border-radius: 5px;
     box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.3);
     /* The CSS overflow: property controls what happens to content that is too big to fit into an area. */
@@ -70,8 +72,10 @@ main div {
 }
 
 main div:hover {
+    transition: width 2s, height 2s, transform 2s;
+    width: 330px;
+    height: 500px;
     transform: scale(1.1);
-    border: 2px solid rgb(0, 0, 0);
 }
 
 main img {
