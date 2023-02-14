@@ -1,0 +1,63 @@
+body {
+    margin: 0 auto;
+    /* padding: 10px; */
+    background-color: antiquewhite;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    /* padding: 30px; */
+    background-color: antiquewhite;
+    box-sizing: border-box;
+}
+
+.wrapper .title {
+    color: rgb(249, 102, 4);
+    text-align: center;
+}
+
+.services h2 {
+    color: #006DAA;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* flex-wrap: wrap-reverse; */
+    /* align-items: flex-start; */
+    /* flex-direction: row; */
+    /* align-items: flex-end; */
+    /* flex-direction: column-reverse; */
+    /* flex-flow: row-reverse wrap-reverse; */
+}
+
+.flex-container div:nth-child(2n) {
+    background-color: rgb(73, 144, 155);
+    /* flex grow is used to stretch the flex items or we can say to increase the width of the items */
+    flex-grow: 3;
+}
+
+.flex-container div:nth-child(2n+1) {
+    background-color: rgb(237, 245, 87);
+    /* flex grow is used to stretch the flex items or we can say to increase the width of the items */
+    flex-grow: 2;
+}
+
+.services {
+    border: 2px solid black;
+    min-width: 150px;
+    height: 100px;
+    padding: 20px;
+}
+
+
+/* Respnosive */
+
+@media screen and (min-width: 400px) and (max-width:600px) {
+    .flex-container div:nth-child(2n+1) {
+        background-color: rgb(240, 95, 11);
+    }
+}

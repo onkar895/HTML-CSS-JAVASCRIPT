@@ -66,6 +66,7 @@ main div {
     background-color: rgb(249, 247, 247);
     border: 5px solid rgb(249, 247, 247);
     border-radius: 5px;
+    text-align: justify;
     box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.3);
     /* The CSS overflow: property controls what happens to content that is too big to fit into an area. */
     overflow: hidden;
@@ -85,6 +86,10 @@ main img {
 
 main .short {
     grid-row: span 1;
+}
+
+main .short a {
+    color: red;
 }
 
 main .Tall {
