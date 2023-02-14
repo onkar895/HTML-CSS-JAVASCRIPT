@@ -1,0 +1,103 @@
+body {
+    margin: 0 auto;
+    background-color: rgb(250, 245, 245);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1 {
+    color: rgb(0, 3, 6);
+    text-align: center;
+    text-shadow: 1px 1px 2px rgb(245, 234, 234), 0 0 25px rgb(199, 56, 4), 0 0 5px rgb(243, 43, 13);
+}
+
+h1:hover {
+    transform: scale(1.1);
+    color: rgb(248, 84, 7);
+    background-color: black;
+}
+
+.gridcontainer {
+    display: grid;
+    max-width: 980px;
+    margin: 0 auto;
+    background-color: antiquewhite;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas: "header header header header" "aside aside main main" "nav nav main main" "section section section section" "section section section section" "footer footer footer footer";
+    /* grid-template-areas: "header header header header" "aside . main main" "nav . main main" "section section section section" "section section section section" "footer footer footer footer"; */
+    grid-gap: 10px;
+}
+
+.gridcontainer>* {
+    background-color: rgb(249, 196, 135);
+    border: 1px solid black;
+    padding: 30px;
+    /* margin: 5px; */
+}
+
+
+/* Giving grid area name */
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+section {
+    grid-area: section;
+}
+
+aside {
+    grid-area: aside;
+}
+
+nav {
+    grid-area: nav;
+}
+
+footer {
+    grid-area: footer;
+}
+
+
+/* Responsive */
+
+
+/* Extra small devices (phones, 600px and down) */
+
+
+/* @media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+
+/* @media only screen and (min-width: 600px) {...} */
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+
+/* @media only screen and (min-width: 768px) {...} */
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+
+/* @media only screen and (min-width: 992px) {...} */
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+
+/* @media only screen and (min-width: 1200px) {...} */
+
+@media screen and (min-width:300px) and (max-width:600px) {
+    .gridcontainer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "header header header header" "nav nav nav nav" "aside aside aside aside" "main main main main" "section section section section" "section section section section" "footer footer footer footer";
+    }
+}
