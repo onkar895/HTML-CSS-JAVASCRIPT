@@ -72,10 +72,15 @@ main div {
     overflow: hidden;
 }
 
-main div:hover {
+main .Tall:hover {
     transition: width 2s, height 2s, transform 2s;
     width: 330px;
     height: 500px;
+    transform: scale(1.1);
+}
+
+main .short:hover {
+    transition: width 2s, height 2s, transform 2s;
     transform: scale(1.1);
 }
 
@@ -85,6 +90,9 @@ main img {
 }
 
 main .short {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     grid-row: span 1;
 }
 

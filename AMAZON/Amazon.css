@@ -1,0 +1,298 @@
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        /* If you set box-sizing: border-box; on an element, padding and border are included in the width and height */
+        box-sizing: border-box;
+    }
+    /* The :root selector matches the document's root element.
+     In HTML, the root element is always the html element. */
+    
+     :root {
+        --color1: #ffffff;
+        --color2: #e3b22b;
+        --color3: rgb(215, 214, 214);
+        --bg-nav: #131921;
+        --bg-subnav: #232f3e;
+        --bg-body: #eaeded;
+    }
+    
+    body {
+        background-color: var(--bg-body);
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    ul {
+        list-style-type: none;
+    }
+    
+    .d-flex {
+        display: flex;
+        align-items: center;
+        background-color: var(--bg-nav);
+        overflow: hidden;
+    }
+    /* Start Brand Logo  */
+    
+    .d-flex .nav-brand {
+        margin: 5px 0 5px 15px;
+    }
+    
+    .d-flex .nav-brand a {
+        display: flex;
+        text-decoration: none;
+        padding: 0 10px 0 6px;
+        color: var(--color1);
+    }
+    
+    .d-flex .nav-brand:hover {
+        border: 1px solid white;
+        border-radius: 2px;
+    }
+    
+    .d-flex .nav-brand img {
+        padding-top: 10px;
+        width: 100px;
+    }
+    
+    .d-flex .nav-brand a span {
+        font-size: 14px;
+        padding-top: 15px;
+    }
+    /* End Brand Logo  */
+    /* Start select address */
+    
+    .d-flex .address {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        padding: 4px;
+    }
+    
+    .d-flex .address:hover {
+        border: 1px solid white;
+        border-radius: 2px;
+    }
+    
+    .d-flex .address li a {
+        color: var(--color1);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 12px;
+        padding-left: 14px;
+    }
+    
+    .d-flex .address li a span {
+        font-weight: bolder;
+        font-size: 14px;
+    }
+    
+    .d-flex .address li a span i {
+        font-size: small;
+        padding: 3px 3px 0 0;
+        color: var(--color1);
+    }
+    /* End Select Address */
+    /* Start of search */
+    
+    .d-flex .search {
+        display: flex;
+        flex-direction: row;
+        margin-left: 15px;
+        flex: 1;
+    }
+    
+    .d-flex .search #Allmenu {
+        border-radius: 5px 0px 0px 5px;
+        border: none;
+        width: 52px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: lighter;
+        padding-left: 15px;
+    }
+    
+    .d-flex .search #Allmenu option {
+        background-color: var(--bg-body);
+    }
+    
+    .d-flex .search input {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        outline: none;
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+    
+    .d-flex .search .fa-magnifying-glass {
+        background-color: var(--color2);
+        border-radius: 0 5px 5px 0;
+        padding: 14px;
+        width: 45px;
+    }
+    
+    .d-flex .search .fa-magnifying-glass:hover {
+        background-color: #f9b703;
+        transform: scale(1);
+    }
+    /* End of Search */
+    /* Start Flag Logo */
+    
+    .d-flex .Flag {
+        color: var(--color1);
+        margin-left: 18px;
+        padding: 10px 6px 8px 6px;
+    }
+    
+    .d-flex .Flag:hover {
+        border: 1px solid white;
+        border-radius: 2px;
+    }
+    
+    .d-flex .Flag span {
+        color: var(--color1);
+        font-size: 14px;
+        font-weight: bold;
+        margin-left: 4px;
+        padding-bottom: 1px;
+    }
+    
+    .d-flex .Flag i {
+        font-size: small;
+        color: rgb(181, 177, 177);
+        padding: 5px 6px 10px 2px;
+    }
+    /* End Flag Logo */
+    /* start hello, User-name */
+    
+    .d-flex .nav-menu {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        padding: 4px;
+    }
+    
+    .d-flex .nav-menu:hover {
+        border: 1px solid white;
+        border-radius: 2px;
+    }
+    
+    .d-flex .nav-menu li a {
+        color: var(--color1);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 12px;
+        padding-left: 1px;
+    }
+    
+    .d-flex .nav-menu li a span {
+        font-weight: bolder;
+        font-size: 14px;
+    }
+    
+    .d-flex .nav-menu li a span i {
+        font-size: small;
+        color: rgb(181, 177, 177)
+    }
+    /* End of hello, User name */
+    
+    .d-flex .nav2-menu {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        padding: 4px;
+    }
+    
+    .d-flex .nav2-menu:hover {
+        border: 1px solid white;
+        border-radius: 2px;
+    }
+    
+    .d-flex .nav2-menu li a {
+        color: var(--color1);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 12px;
+        padding-left: 1px;
+    }
+    
+    .d-flex .nav2-menu li a span {
+        font-weight: bolder;
+        font-size: 14px;
+    }
+    
+    .d-flex .nav2-menu li a span i {
+        font-size: small;
+        color: rgb(181, 177, 177)
+    }
+    
+    .d-flex .Cart {
+        display: flex;
+        align-items: center;
+        margin-left: 8px;
+        margin-right: 10px;
+        padding: 10px;
+    }
+    
+    .d-flex .Cart:hover {
+        border: 1px solid white;
+        border-radius: 2px;
+    }
+    
+    .d-flex .Cart li a {
+        color: var(--color1);
+        padding-left: 1px;
+    }
+    
+    .d-flex .Cart li a span {
+        font-weight: bolder;
+        font-size: 14px;
+    }
+    
+    .d-flex .Cart li a i {
+        font-size: larger;
+        color: var(--color1);
+        padding: 5px 0 0px 1px;
+    }
+    /* Start Subnav Container */
+    
+    header {
+        width: 100%;
+        background-color: var(--bg-subnav);
+        display: flex;
+        align-items: center;
+    }
+    
+    .Subnav {
+        display: flex;
+        padding: 2px 0 2px 10px;
+    }
+    
+    .Subnav a {
+        color: var(--color1);
+        padding: 10px;
+        font-size: 14px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    
+    .Subnav a:hover {
+        border: 1px solid white;
+        border-radius: 2px;
+    }
+    
+    .Subnav a i {
+        margin-right: 6px;
+    }
+    
+    .AmazonPrime-banner {
+        display: flex;
+    }
+    
+    .AmazonPrime-banner a img {
+        margin-left: 27%;
+    }
+    
+    .AmazonPrime-banner a img:hover {
+        border: 1px solid white;
+        border-radius: 2px;
+    }
