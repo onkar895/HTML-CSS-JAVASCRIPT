@@ -1,0 +1,75 @@
+:root {
+    --offcanvas-width: 250px;
+    --topNavbarHeight: 56px;
+}
+
+form>.input-group {
+    margin-left: 930px;
+}
+
+.sidebar-offcanvas {
+    width: var(--offcanvas-width) !important;
+    display: flex !important;
+}
+
+.sidebar-offcanvas .right-icon {
+    display: inline-flex !important;
+}
+
+
+/* settings for drop-down toggle */
+
+.sidelink-nav[aria-expanded="true"] .right-icon {
+    transform: rotate(180deg);
+    transition: all ease 0.45s !important;
+}
+
+
+/* end of drop-down toggle */
+
+
+/* applying settings of canvas  */
+
+@media (min-width:750px) {
+    .sidebar-offcanvas {
+        transform: none !important;
+        /* transform: none; */
+        visibility: visible !important;
+        /* visibility: visible; */
+        top: var(--topNavbarHeight) !important;
+        height: calc(100% - var(--topNavbarHeight));
+    }
+}
+
+
+/* end of canvas settings */
+
+nav {
+    position: relative;
+}
+
+
+/* settings for container heading tag  */
+
+main h2 {
+    top: 18%;
+    left: 20%;
+    position: absolute;
+}
+
+
+/* end of heading tag settings  */
+
+
+/* settings  for card items */
+
+main .card-container {
+    justify-items: center;
+    justify-content: space-evenly;
+    padding-left: 20%;
+    top: 25%;
+    position: absolute;
+}
+
+
+/* end of card settings */
