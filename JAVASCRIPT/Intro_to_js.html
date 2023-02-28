@@ -5,10 +5,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Intro to javascript</title>
+
 </head>
 
 <body>
+    <h1>Getting started with javascript</h1>
+    <ul>
+        <li>
+            Javascript is a <strong>interpreted</strong> as well as <strong>case sensitive</strong> programming language. It can be used for both client-side as well as server-side developments.
+        </li>
+
+        <li>
+            Evolution of javascript: Created in 1995 by brendan Eich while je was working on Netscape.
+        </li>
+
+        <li>Comments:
+            <p>1. Single line: // This is a Single line comment //
+                <br> 2. Multiline: /* This is a Multiline comment */
+            </p>
+        </li>
+    </ul>
+
+    <!-- Internal JS -->
+    <button onclick="alert('Hello Javascript : This is inline JS');">Click to render inline JS</button>
+    <br><br>
+
+    <!-- External JS -->
+    <button type="button" id="helloJs">Click to render External JS</button>
+    <script src="hello.js"></script>
+
+    <hr>
+    <!-- Embedded JS -->
+    <script>
+        var greetings = "welcome to javascript class: Embedded/Internal Js";
+        var age = 21;
+        var isstudent = false;
+        document.write(greetings);
+    </script>
+
+    <!-- Variables -->
+    <script>
+        // Declaring Variable //
+        var isEmployee;
+
+        // Assigning values to variable //
+        isEmployee = true;
+
+        // Declaring Multiple variables //
+        var greetings = "hello!",
+            age = 21,
+            isstudent = true;
+    </script>
+
 
 </body>
 
