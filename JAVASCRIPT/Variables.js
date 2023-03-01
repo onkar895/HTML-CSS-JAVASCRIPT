@@ -1,3 +1,13 @@
+// A console is a test environment. When we write and edit code, we are using a console which is a piece of software that allows us to test and experiment with code.
+
+// log() is a function, or a method, or to put it simply, a program that outputs to the screen some data we processed or typed on the console.
+
+// console.log() is an instruction that literally commands the console to log something to the computer screen.
+
+// Since console.log() was created to be used in consoles ( by the way, every browser has its own console), it is not part of the standard JavaScript language.
+
+// Because console.log is not part of JavaScript you can’t use it outside of a console on a regular HTML page. For that you will have to replace it with alert(), document.write(), innerHTML, confirm() and other output methods.
+
 console.log("Here is the log starts");
 
 // var start:
