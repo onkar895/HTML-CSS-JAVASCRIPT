@@ -383,6 +383,15 @@
             background-color: var(--color1);
         }
         
+        .section-1:hover,
+        .section-2:hover,
+        .section-3:hover,
+        .section-4:hover {
+            transform: translate(0, -10px);
+            transition: transform 0.8s;
+            box-shadow: -1px -1px 1px 1px rgb(86, 86, 86);
+        }
+        
         .section-1 h3,
         .section-2 h3,
         .section-3 h3,
