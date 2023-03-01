@@ -352,7 +352,7 @@
         }
         
         .slide:hover {
-            border: 1.5px solid rgb(63, 62, 62);
+            border: 1.5px solid rgb(62, 62, 62);
             box-shadow: -3px -3px 4px rgb(210, 209, 209), 1px 1px 1px #0d0c0c;
             margin: 2px;
         }
