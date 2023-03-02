@@ -39,7 +39,7 @@ a {
     background-color: aliceblue;
     display: inline-block;
     padding: 10px 20px;
-    margin-left: 90px;
+    margin-left: 100px;
     text-decoration: none;
     color: black;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -59,7 +59,7 @@ a {
 }
 
 .container .card:hover {
-    transition: 4s;
+    transition: 8s;
 }
 
 .container .card:nth-child(1) .icon {
