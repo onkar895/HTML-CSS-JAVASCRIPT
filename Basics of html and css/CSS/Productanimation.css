@@ -1,0 +1,110 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.container .card {
+    width: 320px;
+    padding: 30px;
+    margin: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: justify;
+}
+
+.container .card .content {
+    position: relative;
+    z-index: 1;
+}
+
+.container .card .content h3 {
+    text-align: center;
+    padding: 5px;
+}
+
+.container .card .content p {
+    padding: 5px;
+}
+
+a {
+    background-color: aliceblue;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 90px;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container .card .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    font-size: 20px;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+.container .card:nth-child(1) .icon {
+    background-color: red;
+}
+
+.container .card:nth-child(1):hover .icon {
+    background-color: rgb(252, 246, 246);
+    color: black;
+    box-shadow: 0 0 0 500px red;
+    transform: rotate(-360deg);
+}
+
+.container .card:nth-child(1):hover {
+    background-color: red;
+    color: white;
+    transition: 2s;
+}
+
+.container .card:nth-child(2) .icon {
+    background-color: rgb(113, 112, 112);
+}
+
+.container .card:nth-child(2):hover .icon {
+    background-color: rgb(252, 246, 246);
+    color: black;
+    box-shadow: 0 0 0 500px grey;
+    transform: rotate(-360deg);
+}
+
+.container .card:nth-child(2):hover {
+    background-color: grey;
+    color: white;
+    transition: 2s;
+}
+
+.container .card:nth-child(3) .icon {
+    background-color: rgb(30, 27, 224);
+}
+
+.container .card:nth-child(3):hover .icon {
+    background-color: rgb(252, 246, 246);
+    color: black;
+    box-shadow: 0 0 0 500px blue;
+    transform: rotate(-360deg);
+}
+
+.container .card:nth-child(3):hover {
+    background-color: blue;
+    color: white;
+    transition: 2s;
+}
