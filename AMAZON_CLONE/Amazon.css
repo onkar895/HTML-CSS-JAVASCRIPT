@@ -20,6 +20,42 @@
         body {
             background-color: var(--bg-body);
         }
+        /*         
+        @media screen and (max-width: 300px) {
+            body {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            body {
+                grid-template-columns: 1fr 1fr;
+                max-width: 80rem;
+            }
+        }
+        
+        @media screen and (min-width: 992px) {
+            body {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+        
+        @media screen and (min-width: 600px) {
+            nav {
+                grid-template-columns: 1fr 1fr;
+                max-width: 80rem;
+                min-width: 50rem;
+            }
+        }
+        
+        @media screen and (min-width: 600px) {
+            header {
+                grid-template-columns: 1fr 1fr;
+                max-width: 80rem;
+                min-width: 50rem;
+            }
+        }
+         */
         
         a {
             text-decoration: none;
@@ -34,8 +70,8 @@
             align-items: center;
             background-color: var(--bg-nav);
             overflow: hidden;
-            /* position: fixed;
-            top: 0; */
+            /* z-index: 1; */
+            /* position: fixed; */
         }
         /* Start Brand Logo  */
         
@@ -267,6 +303,8 @@
             background-color: var(--bg-subnav);
             display: flex;
             align-items: center;
+            /* z-index: 1;
+            position: fixed; */
         }
         
         .Subnav {
@@ -506,6 +544,7 @@
             border-radius: 8px;
             font-size: 13px;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            cursor: pointer;
         }
         
         .Sign-in div p {
@@ -545,6 +584,7 @@
             font-size: 14px;
             text-align: center;
             padding: 15px;
+            cursor: pointer;
         }
         
         .Footer-content {
@@ -566,6 +606,7 @@
             margin: 10px;
             padding: 48px;
             color: white;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
         
         footer a {
