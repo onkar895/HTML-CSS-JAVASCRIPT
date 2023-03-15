@@ -90,3 +90,36 @@ if (webdev.length <= 5) {
 } else {
     console.log("You are not-allowed to attend the lectures");
 }
+
+
+// If-else
+const Runs = [30, 40, 50, 60, 70, 80, 90, 100];
+
+for (let i = 0; i < Runs.length; i++) {
+    console.log("Player", i + 1 + " Runs are:", Runs[i]);
+
+    if (Runs[i] === 100) {
+        console.log("Hurrah, you make the century!!");
+    } else if (Runs[i] === 50) {
+        console.log("Well Played, you make the half century!!");
+    } else if (Runs[i] > 50 && Runs[i] < 100) {
+        console.log("Awesome, you played very well!!");
+    } else {
+        console.log("You played average");
+    }
+}
+
+
+// Password Validation 
+
+const password = prompt("Enter the password:");
+
+if (password.length < 8 || password.length > 20) {
+    alert("Password Entered Successfully");
+} else if (!/\d/.test(password)) {
+    alert("Your password should have atleast one number");
+} else if (!/(a-z A-Z)/.test(password)) {
+    alert("Your password should have atleast one letter");
+} else {
+    alert("Password is valid");
+}
