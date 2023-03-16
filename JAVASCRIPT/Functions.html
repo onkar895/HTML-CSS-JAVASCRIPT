@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+
+    <script src="Functions.js"></script>
+</head>
+
+<body>
+    <h2>Functions:</h2>
+    <span><strong>Arrow Functions:</strong> 
+        <ul>
+            <li>Arrow function expressions were introduced in ES6. These expressions are clean and concise.</li>
+            <li>The syntax for an arrow function expression does not require the function keyword and uses a fat arrow => to separate the parameter(s) from the body.</li>
+            <li>There are several variations of arrow functions: <br> 1. Arrow functions with a single parameter do not require () around the parameter list. <br> 2. Arrow functions with a single expression can use the concise function body which returns
+                the result of the expression without the return keyword.</li>
+        </ul>
+    </span>
+
+    <span><strong>Anonymous Functions:</strong> <br>
+        Anonymous functions in JavaScript do not have a name property. They can be defined using the function keyword, or as an arrow function. See the code example for the difference between a named function and an anonymous function.</span>
+    <br><br>
+
+    <span><strong>Callback Function:</strong>
+        <ul>
+            <li>Callback functions are functions that are passed as arguments in other functions. </li>
+            <li>This technique allows a function to call another function</li>
+            <li>A callback function can run after another function has finished</li>
+            <li>When you pass a function as an argument, remember not to use parenthesis.
+                 <br>
+                Right: myCalculator(5, 5, myDisplayer);
+                <br>
+                Wrong: myCalculator(5, 5, myDisplayer());</li>
+        </ul>
+    </span>
+</body>
+
+</html>
