@@ -155,10 +155,12 @@ greet('Peter', callMe);
 
 
 //Example 2:
-
+// By using setTimeout
 function person(name, person2) {
-    console.log("My name is: " + name);
-    person2();
+    setTimeout(function() {
+        console.log("My name is: " + name);
+        person2();
+    }, 2000)
 }
 
 function person2() {
