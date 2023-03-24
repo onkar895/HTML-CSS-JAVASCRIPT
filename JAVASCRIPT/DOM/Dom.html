@@ -9,6 +9,42 @@
 
     <!-- <script src="Dom.js"></script>   :          can't access property -->
 
+    <style>
+        .wrapper {
+            position: relative;
+            top: 40vh;
+        }
+        
+        #button {
+            border: 5px solid #FFAB33;
+            width: 100px;
+            text-align: center;
+            padding: 5px;
+            font-size: 10px;
+            cursor: pointer;
+            margin: auto;
+            background: #FF5733;
+        }
+        
+        #button:hover {
+            background: #DFF30B;
+        }
+        
+        #message {
+            font-size: 16px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .hide {
+            visibility: hidden;
+        }
+        
+        .reveal {
+            visibility: visible;
+        }
+    </style>
+
 </head>
 
 
@@ -125,6 +161,42 @@
 
     <p>The function bigImg() is triggered when the user moves the mouse pointer onto the image.</p>
     <p>The function normalImg() is triggered when the mouse pointer is moved out of the image.</p>
+
+
+
+    <!-- EventListeners: -->
+
+    <!-- 1. addEventListener() : -->
+
+    <!-- Example 1 -->
+    <p> Example of the addEventListener() method. </p>
+    <p> Click the following button to see the effect. </p>
+    <button id="btn"> Click me </button>
+    <p id="para"></p>
+
+    <!-- Example 2 -->
+    <div class="wrapper">
+        <div id="message" class="hide">
+            You won't see this message until after you clicked the button. Click again to hide me!
+        </div>
+        <div id="button">
+            CLICK HERE!
+        </div>
+    </div>
+
+    <!-- Example 3 -->
+    <p> This is an example of adding multiple events of different type to the same element. </p>
+    <p> Click the following button to see the effect. </p>
+    <button id="btn1"> Click me for multiple events </button>
+
+
+    <!-- 2. removeEventListener(): -->
+
+    <h1 id="hovereffect">Do hover on this text here.</h1>
+    <h3>To remove the hovering effect, use this button!</h3>
+    <button id="click_me" onclick="RemoveAfterClick()">Click me</button>
+    <b id="effect"></b>
+
 
 
     <script src="Dom.js"></script>

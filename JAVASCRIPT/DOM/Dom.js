@@ -252,3 +252,79 @@ function normalImg(x) {
     x.style.height = "32px";
     x.style.width = "32px";
 }
+
+
+// Event Listener:
+// Events are actions that happen when the user or browser manipulates a page.
+// An event listener in JavaScript is a way that you can wait for user interaction like a click or keypress and then run some code whenever that action happens. 
+
+// 1. The addEventListener(): 
+// 1. This method attaches an event handler to the specified element.
+// 2. The addEventListener() method attaches an event handler to an element without overwriting existing event handlers.
+// 3. You can add many event handlers to one element.
+// 4. You can add many event handlers of the same type to one element, i.e two "click" events.
+
+// Example 1:
+document.getElementById("btn").addEventListener("click", fun);
+
+function fun() {
+    document.getElementById("para").innerHTML = "Hello World" + "<br>" + "Welcome to the  Concept";
+}
+
+
+// Example 2:
+
+let button = document.querySelector('#button');
+let msg = document.querySelector('#message');
+
+button.addEventListener('click', () => {
+    msg.classList.toggle('reveal');
+})
+
+
+// Example 3:
+// This is an example of adding multiple events of different type to the same element.
+
+var mybtn = document.getElementById("btn1");
+mybtn.addEventListener("mouseover", fun1);
+mybtn.addEventListener("click", fun2);
+mybtn.addEventListener("mouseout", fun3);
+
+function fun1() {
+    btn1.style.width = "150px";
+    btn1.style.height = "50px";
+    btn1.style.background = "yellow";
+    btn1.style.color = "blue";
+}
+
+function fun2() {
+
+    btn1.style.background = "red";
+
+}
+
+function fun3() {
+    document.getElementById("para").innerHTML = "This is second function";
+
+}
+
+
+// 2. removeEventListener() :
+
+// The removeEventListener() method removes an event handler from an element that was previously added 
+// using the addEventListener() function from the element.
+
+const a = document.getElementById("hovereffect");
+a.addEventListener("mouseover", MouseOverEffect);
+
+function MouseOverEffect() {
+    document.getElementById("effect").innerHTML +=
+        "mouseover Event happened because you hovered !!" + "<br>";
+}
+
+function RemoveAfterClick() {
+    a.removeEventListener("mouseover", MouseOverEffect);
+    document.getElementById("effect").innerHTML +=
+        'You just hit the "click me" button' + "<br>" +
+        "Now, the mouseover event is disabled. !!";
+}
