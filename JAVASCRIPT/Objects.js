@@ -101,7 +101,7 @@ console.log("Ceil value: " + Math.ceil(cost));
 console.log("Trunc value: " + Math.trunc(cost));
 
 
-//Random number
+//Random number function
 const randomno = Math.random();
 console.log("The random value generated is: " + randomno);
 console.log("The random value generated (1-10) is: " + randomno * 10);
