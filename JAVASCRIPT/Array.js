@@ -92,7 +92,7 @@ console.log("Removed element 1 and Inserted colors at element 1:" + Ins_rem);
 console.log(Rcolors);
 
 
-// 6. Extracting a Portion of an Array using splice():
+// 6. Extracting a Portion of an Array using slice():
 // If you want to extract out a portion of an array (i.e. subarray) but keep the original array intact you can use the slice() method. 
 // This method takes 2 parameters: start index , and an optional end index like arr.slice(startIndex, endIndex)
 
@@ -229,3 +229,37 @@ var reversed = counts.reverse();
 
 console.log(counts); // Outputs: five,four,three,two,one
 console.log(reversed); // Output: five,four,three,two,one
+
+
+// 15. map():
+// The Array.map() method allows you to iterate over an array and modify its elements using a callback function. 
+// The callback function will then be executed on each of the array's elements.
+// Now imagine you are required to multiply each of the array's elements by 3. You might consider using a for loop.
+// But you can actually use the Array.map() method to achieve the same result.
+
+// Example 1:
+let arr = [3, 4, 5, 6];
+
+let modifiedArr = arr.map(function(element) { // The code iterates over the array arr and applies a function to each element.
+    return element * 3;
+});
+
+console.log(modifiedArr); // [9, 12, 15, 18]
+
+// The Array.map() method is commonly used to apply some changes to the elements, whether multiplying by a specific number as in the code above, 
+// or doing any other operations that you might require for your application.
+
+
+// Example 2: Array of objects
+let users = [
+    { firstName: "Susan", lastName: "Steward" },
+    { firstName: "Daniel", lastName: "Longbottom" },
+    { firstName: "Jacob", lastName: "Black" }
+];
+
+let userFullnames = users.map(function(element) {
+    return `${element.firstName} ${element.lastName}`;
+})
+
+console.log(userFullnames);
+// ["Susan Steward", "Daniel Longbottom", "Jacob Black"]

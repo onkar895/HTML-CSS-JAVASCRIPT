@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document Object Model</title>
 
+    <!-- <script src="Dom.js"></script>   :          can't access property -->
+
 </head>
 
 
@@ -44,7 +46,7 @@
     <br>
 
     <!-- querySelector():  -->
-    <h1 id="Para">Favorite TV shows</h1>
+    <h1 id="Para">Favourite TV shows</h1>
     <p id="Para1">GART</p>
     <ul class="list">
         <li>Golden Girls</li>
@@ -52,6 +54,7 @@
         <li>Rick and Morty</li>
         <li>The Crown</li>
     </ul>
+
 
     <!-- getAttribute(): -->
     <a href="https://www.google.com/" target="_blank" id="myLink">Google</a>
@@ -70,6 +73,58 @@
 
 
 
+
+    <!-- EVENTS IN JAVASCRIPT  -->
+
+    <!-- 1. onclick -->
+
+    <button type="button" onclick="hiThere()" style="margin-left: 50%;">
+            Click Me
+    </button>
+
+    <!-- 2. ondblclick -->
+
+    <button type="button" ondblclick="hey()" style="margin-left: 50%;">
+        Click Me double
+</button>
+
+    <!-- 3. onmouseover -->
+
+    <div id="hover" onmouseover="hov()" style="background-color:rgb(134, 230, 236);
+                height:200px;
+                width:200px;">
+    </div>
+
+    <br>
+
+    <!-- 4. onmouseout  -->
+
+    <div id="hover" onmouseout="out()" style="background-color:rgb(219, 72, 79);height:200px;width:200px;">
+    </div>
+
+    <br>
+
+    <!-- 5. onchange, onfocus -->
+
+    Enter your name: <input type="text" id="fname" onchange="upperCase()">
+    <p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+    <br>
+
+    <!-- 6. onfocus -->
+
+    Enter your name: <input type="text" onfocus="myFunction(this)">
+
+    <p>When the input field gets focus, a function is triggered which changes the background-color.</p>
+
+    <br>
+
+    <!-- 7. onmouseenter and onmouseleave -->
+
+    <img onmouseenter="bigImg(this)" onmouseleave="normalImg(this)" border="0" src="smiley.gif" alt="Smiley" width="32" height="32">
+
+    <p>The function bigImg() is triggered when the user moves the mouse pointer onto the image.</p>
+    <p>The function normalImg() is triggered when the mouse pointer is moved out of the image.</p>
 
 
     <script src="Dom.js"></script>

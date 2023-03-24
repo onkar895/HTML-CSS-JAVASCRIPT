@@ -2,8 +2,10 @@
 // This method is used when developers have defined certain HTML elements with IDs that uniquely identify the same elements in the whole document.
 //  It returns an Element object which matches the specified ID in the method. If the ID does not exist in the document, it simply returns null.
 
+console.log("Logging using getElementById:");
 let Name = document.getElementById('myName');
-console.log(Name);
+document.write(Name);
+Name.style.backgroundColor = "lightblue";
 
 let DisplayName = Name.innerText;
 console.log(DisplayName);
@@ -16,6 +18,7 @@ console.log(DisplayName);
 // This method is used when there are multiple HTML elements with the same class name. 
 // It returns a collection of all objects which match the specified class in the method.
 
+console.log("Logging using getElementByClassName:");
 let fullname = document.getElementsByClassName('FullName');
 console.log(fullname);
 console.log(fullname[0].innerText);
@@ -24,12 +27,14 @@ console.log(fullname[0].innerText);
 // The innerHTML property is useful for getting or replacing the content of HTML elements.
 // The innerHTML property can be used to get or change any HTML element, including <html> and <body>.
 
+console.log("Logging the inner text using innerHTML:");
 let UpdateName = document.getElementById('myName').innerHTML = "OMKAR KARALE";
 console.log(UpdateName);
 
 // 4. getElementsByName(): 
 // In Javascript, getElementsByName() returns a NodeList of objects which match a particular name attribute in the HTML document.
 
+console.log("Logging using getElementByName:");
 const inputs = document.getElementsByName("geek");
 console.log(inputs);
 console.log(inputs[1]);
@@ -37,6 +42,7 @@ console.log(inputs[1]);
 // 5. getElementsByTagName(): 
 // The getElementsByTagName() returns a HTML Collection of objects which match a tag name in the HTML document.
 
+console.log("Logging using getElementByTagName:");
 const p = document.getElementsByTagName("p");
 console.log(p);
 console.log(p[2].innerText);
@@ -44,6 +50,7 @@ console.log(p[2].innerText);
 // 6. querySelector(): 
 // This method returns the first match of an element that is found within the HTML document with the specific selector. If there is no match, null is returned.
 
+console.log("Logging using querySelector:");
 const h1Element = document.querySelector("#Para");
 // console.log(h1Element);
 // console.log(h1Element.innerText);
@@ -58,13 +65,29 @@ const list = document.querySelector(".list");
 
 console.log(h1Element.innerText, pElement.innerText, list.innerText);
 
+h1Element.innerText += " and Channels"; // here '+=' join the first element's content to the second element's content
+console.log(h1Element.innerText);
+
 
 // 7. querySelectorAll():
 // This method finds all of the elements that match the CSS selector and returns a list of all of those nodes.
 
+console.log("Logging using querySelectorAll:");
 const listItems = document.querySelectorAll("ul > li");
 console.log(listItems);
 console.log(listItems[2].innerText);
+
+console.log("Logging using foreach");
+listItems.forEach(list => {
+    console.log(list);
+})
+
+console.log("Logging using foreach innertext");
+listItems.forEach(list => { //The code will loop through the list items and print out each item's innerText value.
+    console.log(list.innerText); //  logging each item's innerText. 
+    list.innerText += " Adding new text"; // The code is also adding a new text to each item in the list.
+    console.log(list.innerText);
+})
 
 
 
@@ -155,3 +178,77 @@ unorderedList.replaceChild(listItem3, listItem2);
 
 // 4. removeChild() :   Remove an HTML element to the document.
 unorderedList.removeChild(unorderedList.firstElementChild);
+
+
+
+// Javascript Events:
+// Javascript has events to provide a dynamic interface to a webpage. 
+// These events are hooked to elements in the Document Object Model(DOM).
+// A JavaScript can be executed when an event occurs, like when a user clicks on an HTML element.
+// We can bind events either as inline or in an external script.
+
+// 1. onclick event: 
+// This is a mouse event and provokes any logic defined if the user clicks on the element it is bound to.
+
+function hiThere() {
+    alert('Hi there!');
+}
+
+
+// 2. ondblclick event: 
+// This is a mouse event and provokes any logic defined if the user double clicks on the element it is bound to.
+
+function hey() {
+    alert('Hey you have clicked me twice');
+}
+
+
+// 3. onmouseover event: 
+// This event corresponds to hovering the mouse pointer over the element and its children, to which it is bound to.
+
+function hov() {
+    var e = document.getElementById('hover');
+    e.style.backgroundColor = 'red';
+}
+
+
+// 4. onmouseout event: 
+// Whenever the mouse cursor leaves the element which handles a mouseout event, a function associated with it is executed. 
+
+function out() {
+    var e = document.getElementById('hover');
+    e.style.backgroundColor = 'yellow';
+}
+
+
+// 5. onchange or onfocus event :
+// The onchange and onblur event occurs when an HTML element loses focus.
+// The onchange and onfocus event is often used on input fields.
+
+function upperCase() {
+    const x = document.getElementById("fname");
+    x.value = x.value.toUpperCase();
+}
+
+
+// 6. onfocus event:
+//  The onchange event is used when it gets focus.
+
+function myFunction(x) {
+    x.style.background = "lightblue";
+}
+
+
+// 7. onmouseenter and onmouseleave 
+// The onmouseenter event occurs when the mouse pointer enters an element.
+// The onmouseenter event occurs when the mouse pointer leaves an element.
+
+function bigImg(x) {
+    x.style.height = "64px";
+    x.style.width = "64px";
+}
+
+function normalImg(x) {
+    x.style.height = "32px";
+    x.style.width = "32px";
+}
