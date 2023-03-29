@@ -90,8 +90,22 @@ listItems.forEach(list => { //The code will loop through the list items and prin
 })
 
 
+// Difference between innertext and textContent:
 
-//   Getting and adding attributes to the html elements
+// 1. innerText and textContent are decidedly not the same. 
+// 2. innerText returns the visible text contained in a node, while textContent returns the full text.
+// 3. For example, on the following HTML <span>Hello <span style="display: none;">World</span></span>, innerText will return 'Hello', 
+// 4. while textContent will return 'Hello World'. For a more complete list of differences, see the table at.
+
+let doc = document.querySelector('span');
+console.log("innertext;");
+console.log(doc.innerText);
+console.log("textContent:");
+console.log(doc.textContent);
+
+
+
+//   Getting and adding attributes to the html elements:
 
 // 1. getAttribute(): 
 //The getAttribute() method is used to get the current value of a attribute on the element.
@@ -120,13 +134,21 @@ var btn = document.getElementById("myBtn");
 btn.setAttribute("class", "click-btn");
 btn.setAttribute("disabled", "");
 
+
 // 2nd Example:
 // Selecting the element
 var link = document.getElementById("myLink2");
 
 // Changing the href attribute value.
 link.setAttribute("href", "https://www.tutorialrepublic.com");
+console.log(link.getAttribute("href"));
 
+
+// 3rd Example:
+const ms = document.querySelector('span');
+ms.setAttribute("class", "master");
+ms.setAttribute("style", "background-Color: lightblue;");
+ms.innerText += "Onkar";
 
 // 3. removeAttribute():
 // The removeAttribute() method is used to remove an attribute from the specified element.
@@ -155,6 +177,7 @@ unorderedList.appendChild(newContent)
 
 //Then we need to add that <ul> element to the document using the appendChild() method.
 
+
 // 2. appendChild(): 
 // Add an HTML element to the document. It is used for creating a new element with some text then first create the text as the text node and 
 // then append it to the element,  then append the element to the document.
@@ -170,14 +193,17 @@ listItem2.textContent = "It's awesome";
 // textcontent is used to add some text in the html element.
 unorderedList.appendChild(listItem2);
 
+
 // 3. replaceChild(new,old): 
 // Replace an HTML element from the document. It is used to replace a child node with a new node within the given parent node.
 let listItem3 = document.createElement("li");
 listItem3.textContent = "It's fantastic";
 unorderedList.replaceChild(listItem3, listItem2);
 
+
 // 4. removeChild() :   Remove an HTML element to the document.
 unorderedList.removeChild(unorderedList.firstElementChild);
+
 
 
 
@@ -186,6 +212,7 @@ unorderedList.removeChild(unorderedList.firstElementChild);
 // These events are hooked to elements in the Document Object Model(DOM).
 // A JavaScript can be executed when an event occurs, like when a user clicks on an HTML element.
 // We can bind events either as inline or in an external script.
+
 
 // 1. onclick event: 
 // This is a mouse event and provokes any logic defined if the user clicks on the element it is bound to.
@@ -236,6 +263,8 @@ function upperCase() {
 
 function myFunction(x) {
     x.style.background = "lightblue";
+    x.style.fontSize = '20px';
+    x.style.margin = '40px';
 }
 
 

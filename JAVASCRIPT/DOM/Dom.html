@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document Object Model</title>
 
-    <!-- <script src="Dom.js"></script>   :          can't access property -->
+    <!-- <script src="Dom.js"></script>   :          // Uncaught error : can't access property -->
 
     <style>
         .wrapper {
@@ -71,7 +71,7 @@
     <input type="text" placeholder="Text input" name="geek" />
     <input type="number" placeholder="Number input" name="geek" />
 
-    <br>
+    <br><br>
 
     <!-- getElementByTagName: -->
     <div>GFG</div>
@@ -92,12 +92,20 @@
     </ul>
 
 
+    <!-- Difference between innertext and textContent: -->
+    <span>Hello <span style="display: none;">World</span></span>
+
+
     <!-- getAttribute(): -->
-    <a href="https://www.google.com/" target="_blank" id="myLink">Google</a>
+    <a href="https://www.google.com/" target="_blank" id="myLink">Google</a>&nbsp;
+
 
     <!-- setAttribute(): -->
-    <button type="button" id="myBtn">Click Me</button>
-    <a href="#" id="myLink2">Tutorial Republic</a>
+    <button type="button" id="myBtn">Click Me</button>&nbsp;
+    <a href="#" id="myLink2">Tutorial Republic</a>&nbsp;
+
+    <span>Hi,This is me</span> &nbsp;
+
 
     <!-- removeAttribute(): -->
     <a href="https://www.google.com/" id="myLink3">Google</a>
