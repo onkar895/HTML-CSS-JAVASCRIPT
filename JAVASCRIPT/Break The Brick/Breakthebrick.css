@@ -1,9 +1,10 @@
 .grid {
     position: absolute;
     width: 560px;
-    height: 500px;
-    border: 3px solid rgb(245, 148, 29);
+    height: 300px;
+    border: 3px solid rgb(16, 12, 1);
     background-color: bisque;
+    margin-left: 350px;
 }
 
 .block {
