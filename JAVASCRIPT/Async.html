@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous JavaScript</title>
+</head>
+
+<body>
+    <h2>Asynchronous JavaScript</h2>
+    <p>Asynchronous JavaScript code is spmething, which start at current interval and ends later.</p>
+    <p>Functions running in parallel with other functions are called asynchronous.</p>
+    <p>Basically, JS is a synchronous language.</p>
+
+    <!-- Example 1: -->
+    <p>The result of the calculation is:</p>
+    <p id="demo"></p>
+
+    <!-- setTimeout() with a Callback -->
+    <h2>setTimeout() with a Callback</h2>
+
+    <p>Wait 2 seconds (2000 milliseconds) for this page to change.</p>
+
+    <h1 id="demo"></h1>
+
+    <!-- callback functions: -->
+
+    <span><strong>Callback Function:</strong>
+        <ul>
+            <li>Callback functions are functions that are passed as arguments in other functions. </li>
+            <li>This technique allows a function to call another function</li>
+            <li>A callback function can run after another function has finished</li>
+            <li>When you pass a function as an argument, remember not to use parenthesis.
+                 <br>
+                Right: myCalculator(5, 5, myDisplayer);
+                <br>
+                Wrong: myCalculator(5, 5, myDisplayer());</li>
+        </ul>
+    </span>
+
+
+
+    <script src="Async.js"></script>
+</body>
+
+</html>
