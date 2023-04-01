@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+}
+
 .grid {
     position: absolute;
     width: 560px;
@@ -12,8 +29,6 @@
     width: 100px;
     height: 20px;
     background-color: rgb(249, 196, 130);
-    /* left: 20px;
-    bottom: 20px; */
     border: 1px solid black;
 }
 
@@ -32,4 +47,26 @@
     border-radius: 10px;
     background-color: rgb(245, 148, 29);
     border: 1px solid black;
+}
+
+.username {
+    padding: 10px;
+}
+
+.username p {
+    font-weight: bolder;
+    font-size: 2em;
+    color: rgb(8, 8, 8);
+}
+
+.username p>.name,
+.score {
+    color: rgb(213, 103, 44);
+}
+
+.username p>#result {
+    color: red;
+    text-transform: uppercase;
+    padding: 10px 0;
+    text-shadow: 0 2px 10px black;
 }

@@ -1,7 +1,16 @@
-const grid = document.querySelector('.grid');
+const grid = document.querySelector(".grid");
+const userScore = document.querySelector(".score");
+const userResult = document.getElementById("#result")
+
 const blockWidth = 100;
 const blockHeight = 20;
 let gridWidth = 560;
+const gridHeight = 310;
+let timerId;
+let ballDiameter = 20;
+let xDirection = 2;
+let yDirection = 2;
+let score = 0;
 
 
 const startUser = [230, 10]
@@ -9,7 +18,15 @@ let currentPosition = startUser;
 
 const startBall = [270, 40]
 let ballCurrentPosition = startBall;
-let ballDirection = [2, 2];
+
+
+function userName() {
+    const userName = document.querySelector(".name");
+    let user = prompt("Enter your name");
+    userName.textContent = user;
+
+}
+
 
 // create block
 class Block {
@@ -64,6 +81,7 @@ const user = document.createElement('div');
 user.classList.add('user');
 drawUser();
 grid.appendChild(user);
+document.addEventListener("keydown", moveUser);
 
 // Draw user
 function drawUser() {
@@ -93,11 +111,6 @@ function moveUser(u) {
 
 }
 
-//Add a ball
-const ball = document.createElement('div');
-ball.classList.add('ball');
-drawBall();
-grid.appendChild(ball);
 
 // Draw a ball
 function drawBall() {
@@ -105,30 +118,76 @@ function drawBall() {
     ball.style.bottom = ballCurrentPosition[1] + 'px';
 }
 
-function moveBall() {
-    // check for collisions with walls
-    if (ballCurrentPosition[0] >= gridWidth - 20 || ballCurrentPosition[0] <= 0) {
-        ballDirection[0] = -ballDirection[0];
-    }
-    if (ballCurrentPosition[1] >= 280 || ballCurrentPosition[1] <= 0) {
-        ballDirection[1] = -ballDirection[1];
-    }
+//Add a ball
+const ball = document.createElement('div');
+ball.classList.add('ball');
+drawBall();
+grid.appendChild(ball);
 
-    // check for collisions with blocks
-    for (let i = 0; i < blocks.length; i++) {
-        if (ballCurrentPosition[0] > blocks[i].bottomLeft[0] && ballCurrentPosition[0] < blocks[i].bottomRight[0] &&
-            ballCurrentPosition[1] + 20 > blocks[i].bottomLeft[1] && ballCurrentPosition[1] < blocks[i].topLeft[1]) {
-            ballDirection[1] = -ballDirection[1];
-            const block = document.querySelector(`.block:nth-child(${i+1})`);
-            block.classList.remove('block');
-            blocks.splice(i, 1);
+
+function moveBall() {
+    ballCurrentPosition[0] += xDirection;
+    ballCurrentPosition[1] += yDirection;
+    drawBall();
+    checkCollision();
+}
+timerId = setInterval(moveBall, 20);
+
+
+function checkCollision() {
+    for (i = 0; i < blocks.length; i++) {
+        if (ballCurrentPosition[0] > blocks[i].bottomLeft[0] &&
+            ballCurrentPosition[0] < blocks[i].bottomRight[0] &&
+            ballCurrentPosition[1] + ballDiameter > blocks[i].bottomLeft[1] &&
+            ballCurrentPosition[1] < block[i].topLeft[1]) {
+            const allblocks = Array.from(document.querySelectorAll(".block"))
+            allblocks[i].classList.remove("block");
+            block.splice(i, 1);
+            changeDirection();
+            score++;
+            userScore.textContent = score;
         }
     }
+    if (ballCurrentPosition[0] >= (gridWidth - ballDiameter) ||
+        ballCurrentPosition[0] <= 0 ||
+        ballCurrentPosition[1] >= (gridHeight - ballDiameter)
+    ) {
+        changeDirection();
+    }
 
-    ballCurrentPosition[0] += ballDirection[0];
-    ballCurrentPosition[1] += ballDirection[1];
-    drawBall();
+    // user paddle 
+    if (ballCurrentPosition[0] > currentPosition[0] &&
+        ballCurrentPosition[0] < currentPosition[0] + blockWidth &&
+        ballCurrentPosition[1] > currentPosition[1] &&
+        ballCurrentPosition[1] < currentPosition[1] + blockHeight) {
+        changeDirection();
+    }
+
+    // bottom grid collision 
+    if (ballCurrentPosition[1] <= 0) {
+        clearInterval(timerId);
+        userResult.textContent = "Better Luck next Time!!";
+        document.removeEventListener("keydown", moveBall);
+        document.removeEventListener("keydown", moveUser);
+    }
 }
 
-document.addEventListener('keydown', moveUser);
-setInterval(moveBall, 0);
+function changeDirection() {
+    if (xDirection === 2 && yDirection === 2) {
+        yDirection = -2;
+        return;
+    }
+    if (xDirection === 2 && yDirection === -2) {
+        xDirection = -2;
+        return;
+    }
+
+    if (xDirection === -2 && yDirection === -2) {
+        yDirection = 2
+        return;
+    }
+    if (xDirection === -2 && yDirection === 2) {
+        xDirection = 2
+        return;
+    }
+}
