@@ -11,7 +11,7 @@ let DisplayName = Name.innerText;
 console.log(DisplayName);
 
 // To change the value of an HTML attribute, use this syntax:
-// document.getElementById(id).attribute = new value
+// document.getElementById(id).attribute = new value;
 // document.getElementById("myImage").src = "landscape.jpg";
 
 // 2. getElementsByClassName(): 
