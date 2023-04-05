@@ -9,10 +9,14 @@
 </head>
 
 <body>
+    <p><strong>Synchronous programming:</strong> It is a way for computers to do things one step at a time, in the order they are given the instructions. </p>
     <h2>Asynchronous JavaScript</h2>
-    <p>Asynchronous JavaScript code is spmething, which start at current interval and ends later.</p>
+    <p>Asynchronous JavaScript code is something, which start at current interval and ends later.</p>
+    <p>Asynchronous programming is a way for a computer program to handle multiple tasks simultaneously rather than executing them one after the other. </p>
     <p>Functions running in parallel with other functions are called asynchronous.</p>
-    <p>Basically, JS is a synchronous language.</p>
+    <p>Basically, JS is a synchronous language and single-threaded langauage.</p>
+    <p>Single thereaded means javascript can only execute one command at a time.</p>
+    <p>Synchronous Single thereaded means javascript can only execute one command at a time and in a specific order. It means that, it can only go to the next line once the current line finished execution.</p>
 
     <!-- Example 1: -->
     <p>The result of the calculation is:</p>
@@ -31,7 +35,8 @@
         <ul>
             <li>Callback functions are functions that are passed as arguments in other functions. </li>
             <li>This technique allows a function to call another function</li>
-            <li>A callback function can run after another function has finished</li>
+            <li>A callback function can run after another(first) function has finished  execution</li>
+            <li>A callback is simply a piece of JavaScript that gets executed after something else has finished executing.</li>
             <li>When you pass a function as an argument, remember not to use parenthesis.
                  <br>
                 Right: myCalculator(5, 5, myDisplayer);
