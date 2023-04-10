@@ -98,7 +98,7 @@ const person = {
 };
 
 
-// Math: 
+// Math methods: 
 
 console.log(Math);
 console.log("The value of PI in Math obj: " + Math.PI);
