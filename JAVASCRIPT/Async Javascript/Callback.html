@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+
+<body>
+
+    <!-- callback functions: -->
+
+    <span><strong>Callback Function:</strong></span>
+    <ul>
+        <li>Callback functions are functions that are passed as arguments in other functions. </li>
+        <li>This technique allows a function to call another function</li>
+        <li>A callback function can run after another(first) function has finished execution</li>
+        <li>A callback is simply a piece of JavaScript that gets executed after something else has finished executing.</li>
+        <li>When you pass a function as an argument, remember not to use parenthesis.
+            <br> Right: myCalculator(5, 5, myDisplayer);
+            <br> Wrong: myCalculator(5, 5, myDisplayer());</li>
+    </ul>
+
+    <span><strong>Callback hell or pyramid of doom</strong></span>
+    <ul>
+        <li> Callbacks provide a useful way to handle asynchronous operations. However, when many callbacks are nested, the code can be complex and hard to read and understand.</li>
+        <li>This happens when you chain multiple callbacks together, one after the other, creating a pyramid - like structure of indentation called callback hell, also known as the "Pyramid of Doom".</li>
+
+    </ul>
+
+    <script src="Callback.js"></script>
+</body>
+
+</html>

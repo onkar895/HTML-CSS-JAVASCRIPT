@@ -112,8 +112,8 @@ console.log(Sum(2, 5));
 
 const invoiceARR = (product, tax) => {
     let total = 0;
-    for (let i = 0; i < products.length; i++) {
-        total += products[i] + products[i] * tax;
+    for (let i = 0; i < product.length; i++) {
+        total += product[i] + product[i] * tax;
     }
     return total;
 }

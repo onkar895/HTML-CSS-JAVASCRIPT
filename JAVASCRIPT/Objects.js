@@ -83,9 +83,19 @@ const blogOne = [
     { title: 'Most streamed game of 2023', coauthor: 'Avinash', likes: 2000 },
     { title: 'Best esports of 2023', coauthor: 'Priyanka', likes: 50000 },
 ];
-
 console.log(blogOne);
 console.log(blogOne[0]);
+
+const person = {
+
+    fname: 'onkar',
+    lname: 'karale',
+    age: 24,
+
+    greet: function() {
+        return `hi, my name is ${this.fname}`
+    }
+};
 
 
 // Math: 
@@ -94,7 +104,7 @@ console.log(Math);
 console.log("The value of PI in Math obj: " + Math.PI);
 console.log("The value of E in Math obj: " + Math.E);
 
-const cost = 200.73;
+const cost = 250.73;
 console.log("Rounded value: " + Math.round(cost));
 console.log("Floor value: " + Math.floor(cost));
 console.log("Ceil value: " + Math.ceil(cost));

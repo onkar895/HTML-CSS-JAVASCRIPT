@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+
+<body>
+    <span><strong>Introduction to promises:</strong></span>
+    <ul>
+        <li>Promises provide a more elegant way of handling the asynchronous flow of a program compared to callback functions.</li>
+        <li>A promise in JavaScript is a placeholder for a future value or action.</li>
+        <li>By creating a promise, you are essentially telling the JavaScript engine to "promise" to perform a specific action and notify you once it is completed or fails. The code either executes or fails , in both the cases subscriber will be notified.</li>
+        <li> Next, callback functions are then attached to the promise to handle the outcome of the action. These callbacks will be invoked when the promise is fulfilled (action completed successfully) or rejected (action failed).</li>
+    </ul>
+
+    <span>How to create promises:</span>
+    <ul>
+        <li>To create a promise, you'll create a new instance of the Promise object by calling the Promise constructor.</li>
+        <li>The constructor takes a single argument: a function called executor. The "executor" function is called immediately when the promise is created, and it takes two arguments: a 'resolve' function and a 'reject' function.</li>
+        <li>resolve and reject are two callbacks provided by javascript engine itself.</li>
+        <ul>
+            <li>resolve(value): If the job is finished succesfully. </li>
+            <li>reject(error): If the job fails or gets an error message.</li>
+        </ul>
+    </ul>
+
+    <span>Promise Chaining:</span>
+    <ul>
+        <li>Promise chaining is a pattern that allows for a clear and easy-to-understand approach to handling asynchronous operations.</li>
+        <li>The pattern involves connecting multiple promises in a sequence, where the output of one promise is passed as input to the next promise.</li>
+        <li>The linking of the promises is achieved using the then() method. This method uses a callback function as an argument and returns a new promise. </li>
+        <li> The new promise is then resolved with the value returned by the callback function.</li>
+    </ul>
+
+
+    <script src="Promises.js"></script>
+</body>
+
+</html>
