@@ -23,6 +23,17 @@ getData();
 // Once the data is retrieved, we use await again to wait and parse the retrieved data as JSON.
 // And then finally, we log the data to the console.
 
+const todolist = async() => {
+    const response = await fetch('JSON/todolist.json');
+    console.log("Response:", response)
+        // const data = response.json();    
+        // console.log("Fetched Data without await:", data);
+    const data1 = await response.json();
+    console.log("Fetched Data with await:", data1);
+
+}
+
+todolist();
 
 // Example 2:   Async Await Promises
 
@@ -34,13 +45,21 @@ function helloWorld() {
     });
 }
 
+function helloIndia() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve('Hello India!');
+        }, 2000);
+    });
+}
+
 async function msg() {
     const msg = await helloWorld();
     console.log('Message:', msg);
 }
 
 async function msg1() {
-    const msg = await helloWorld();
+    const msg = await helloIndia();
     console.log('Message:', msg);
 }
 
@@ -128,3 +147,19 @@ setTimeout(() => {
 setTimeout(() => {
     console.log("Username and password of rahul (dwar123456) fetched.");
 }, 7000);
+
+
+
+const todolist1 = async() => {
+    const response = await fetch('JSON/todolist.json');
+    console.log("Response:", response)
+
+    if (response.status !== 200) {
+        throw new error("Cannot fetch the data");
+    }
+
+    const data = response.json();
+    console.log("Fetched Data without await:", data);
+}
+
+todolist1();

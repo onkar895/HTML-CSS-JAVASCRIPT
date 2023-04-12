@@ -216,3 +216,10 @@ fetch('https://some-api.com/data')
 // 3. The first.then() method is called to consume the promise and extract JSON data from the response.
 // 4. The next then() method is called to log the extracted data to the console.
 // 5. If any errors occur, they will be caught in thecatch () method and logged to the console.
+
+fetch("JSON/todolist.json").then((response) => {
+    console.log("Resolved data is: ", response)
+    return response.json();
+}).then((data) => {
+    console.log(data);
+})
