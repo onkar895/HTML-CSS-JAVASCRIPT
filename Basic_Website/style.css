@@ -3,6 +3,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 /* Header styles */
@@ -95,23 +97,23 @@ nav a:hover {
 @keyframes slide-animation {
   0% {
     opacity: 0;
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
   }
   10% {
     opacity: 1;
-    transform: scale(1);
-  }
-  20% {
-    opacity: 1;
-    transform: scale(1);
+    /* transform: scale(1); */
   }
   30% {
+    opacity: 1;
+    /* transform: scale(1); */
+  }
+  50% {
     opacity: 0;
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
   }
   100% {
     opacity: 0;
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
   }
 }
 
