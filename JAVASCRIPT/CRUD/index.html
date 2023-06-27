@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CRUD APP</title>
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+        <h1>CRUD App</h1>
+
+        <div>
+            <input type="text" id="searchInput" placeholder="Search..." />
+        </div>
+
+        <table id="data">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Actions</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>John Doe</td>
+                <td>john.doe@example.com</td>
+                <td>1234567890</td>
+                <td>123 Street, City</td>
+                <td>
+                    <button onclick="openModal(1)">Update</button>
+                    <button onclick="deleteRecord(1)">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Jane Smith</td>
+                <td>jane.smith@example.com</td>
+                <td>9876543210</td>
+                <td>456 Road, Town</td>
+                <td>
+                    <button onclick="openModal(2)">Update</button>
+                    <button onclick="deleteRecord(2)">Delete</button>
+                </td>
+            </tr>
+        </table>
+
+        <div id="updateModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Update Record</h2>
+                <form>
+                    <label for="updateName">Name:</label>
+                    <input type="text" id="updateName" required />
+                    <br />
+                    <label for="updateEmail">Email ID:</label>
+                    <input type="email" id="updateEmail" required />
+                    <br />
+                    <label for="updatePhone">Phone:</label>
+                    <input type="tel" id="updatePhone" required />
+                    <br />
+                    <label for="updateAddress">Address:</label>
+                    <input type="text" id="updateAddress" required />
+                    <br />
+                    <button type="button" onclick="saveChanges()">Save Changes</button>
+                </form>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
